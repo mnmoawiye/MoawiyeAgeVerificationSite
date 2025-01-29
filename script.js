@@ -4,7 +4,6 @@ const myResult = document.getElementById("result");
 
 let age; 
 
-
 mySubmit.onclick = function() {
     age = myText.value;
     age = Number(age); 
@@ -13,6 +12,8 @@ mySubmit.onclick = function() {
         myResult.textContent = "Too Young";
     } else if (age >= 13 && age < 18) {
         myResult.textContent = "Must have parental guidance";
+    } else if (age == 21) {  
+        myResult.textContent = "You are exactly 21!";
     } else if (age >= 18 && age <= 30) {
         myResult.textContent = "Perfect age range";
     } else if (age > 30 && age <= 60) {
